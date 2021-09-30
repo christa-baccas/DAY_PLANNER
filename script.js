@@ -9,7 +9,7 @@ currentDate();
 // timeblocks have standard business hours. the timeblocks for that day then each timeblock is color coded to indicate whether it is in the past, present, or future
 
 
-// var int = parseInt($('#item').text());
+// var int = parseInt($('#id').text());
 // console.log(int);
 
 
@@ -40,5 +40,19 @@ function displayTime() {
  displayTime()
 
 //  I click the save button for that timeblock the text for that event is saved in local storage
-// WHEN I refresh the page
-// THEN the saved events persist
+
+// textarea box for input
+var inputText = $('.col-8');
+
+// save button
+var saveBtn = $('.saveBtn');
+
+
+function saveToLocalStorage(){
+    localStorage.setItem('Text', inputText);
+}
+saveToLocalStorage();
+
+saveBtn.on('click', saveToLocalStorage);
+
+// WHEN I refresh the page the saved events persist
