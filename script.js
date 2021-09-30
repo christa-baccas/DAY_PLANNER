@@ -6,43 +6,24 @@ function currentDate(){
 }
 currentDate();
 
-
-
 // timeblocks have standard business hours. the timeblocks for that day then each timeblock is color coded to indicate whether it is in the past, present, or future
-// var currentTime = moment().format('LT');
-// if(currentTime ===){
 
-// }
-function currentTime() {
-    var time = moment().hours()
-    console.log(current);
-    var hour = $('.hour');
+
+// var int = parseInt($('#item').text());
+// console.log(int);
+
+
+function displayTime() {
+    //displays hours in military time
+    var current = moment().hours()
+    var times = $('.time-block');
 
     //    console.log(current);
+    //    console.log(times);
 
-    // time.each(function () {
-    //   var hour = parseInt($(this).attr('id'))
 
-    // //  console.log(hour);
-
-    //   if (hour === current) {
-    //     $(this).children('.col-sm-10').attr('class', 'present col-sm-10 description')
-    // //    console.log(('present' + hour + current))
-    //   } else if (current > hour) {
-    //     $(this).children('.col-sm-10').attr('class', 'past col-sm-10 description')
-    // //    console.log(('past' + hour + current))
-    //   } else {
-    //     $(this).children('.col-sm-10').attr('class', 'future col-sm-10 description')
-    // //    console.log(('future' + hour + current))
-    //   }
-    // })
   }
-  currentTime()
-
-
-// when I click into a timeblock I can enter an event
-
-
+//   currentTime()
 
 //  I click the save button for that timeblock the text for that event is saved in local storage
 // WHEN I refresh the page
