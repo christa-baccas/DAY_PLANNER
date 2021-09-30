@@ -16,14 +16,28 @@ currentDate();
 function displayTime() {
     //displays hours in military time
     var current = moment().hours()
+        //    console.log(current);
     var times = $('.time-block');
+        //    console.log(times);
+    times.each(function(){
+        //loops through each id attribute
+        var int = parseInt($(this).attr('id'));
+        // console.log(`Id value ${int}`);
 
-    //    console.log(current);
-    //    console.log(times);
-
+        if(current === int){
+            $(this).children('.col-8').attr('class', 'col-8 present');
+        }else if(current > int){
+            $(this).children('.col-8').attr('class', 'col-8 past');
+        }else{
+            $(this).children('.col-8').attr('class', 'col-8 future');
+        }
+        // var row = $('.row');
+        // console.log(row);
+    })
 
   }
-//   currentTime()
+
+ displayTime()
 
 //  I click the save button for that timeblock the text for that event is saved in local storage
 // WHEN I refresh the page
