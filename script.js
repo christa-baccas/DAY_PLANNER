@@ -45,15 +45,32 @@ function displayTime() {
 // if i enter data in textarea when i click save data is store in local storage
 
 
-var textArea = $('.col-8');
-var userInput = textArea.val();
 
-function storeUserInput(event){
-    event.preventDefault();
+$(".saveBtn").click(function (event) {
+    event.preventDefault;
+    
+    // val() method is used to get the values from 
+   // textarea and stored in txt variable
+    console.log($(this));
+    var txt = $(this).siblings('.col-8').val();
+    // console.log(txt);
+    var storedData = $(this).parent().attr('id');
+    // console.log(storedData);
+    localStorage.setItem(storedData, txt);
+});
 
-    var userInput = textArea.val();
-    console.log(userInput);
-}
+
+
+   $('.col-8').each(function(){
+    var storedData = $(this).parent().attr('id');
+    console.log(storedData);
+    console.log(localStorage.getItem(storedData));
+    var showTxt = localStorage.getItem(storedData);
+    $(this).val(showTxt);
+});
+
+
+
 
 
 
