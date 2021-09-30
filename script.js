@@ -41,18 +41,26 @@ function displayTime() {
 
 //  I click the save button for that timeblock the text for that event is saved in local storage
 
-// textarea box for input
-var inputText = $('.col-8');
 
-// save button
-var saveBtn = $('.saveBtn');
+// if i enter data in textarea when i click save data is store in local storage
 
 
-function saveToLocalStorage(){
-    localStorage.setItem('Text', inputText);
+var textArea = $('.col-8');
+var userInput = textArea.val();
+
+function storeUserInput(event){
+    event.preventDefault();
+
+    var userInput = textArea.val();
+    console.log(userInput);
 }
-saveToLocalStorage();
 
-saveBtn.on('click', saveToLocalStorage);
+
+
+
+
+
+
+
 
 // WHEN I refresh the page the saved events persist
