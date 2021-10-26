@@ -4,7 +4,7 @@
 1. color coded time slots
     - current hour: red
     - past hour: grey
-    - futre hour: green
+    - future hour: green
 2. user input in the text area (middle column) can be saved
     - using local storage data saved will remain presented if the user refreshes the browser
 
