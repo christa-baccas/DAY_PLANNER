@@ -1,4 +1,4 @@
-# HOMEWORK5_DAY_PLANNER
+# DAY_PLANNER
 # Description
 - This assigment was to create a daily planner which included:
 1. color coded time slots
